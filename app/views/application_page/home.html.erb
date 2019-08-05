@@ -18,6 +18,7 @@
          Ecrit par :
         <% g = Gossip.find(index+1) %>
        <a href="/user/<%= g.user.first_name%>">  <strong><%= gossip.user.first_name %></strong></a>
+       <p>Titre : <%= g.title %> </p>
         </div>
         </div>
 
