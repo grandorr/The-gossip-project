@@ -15,13 +15,13 @@
 <div class="container">
 
  <div class="row">
-      <% u.gossips.all.each_with_index do |gossip,index| %>
+      <% u.gossips.all.each do |gossip| %>
 <div class=" col-md-4 ">
 <br/>
   <div class="card-header  card text-white    ">
 
-        <% g = Gossip.find(index+1) %>
-       <p>Titre : <br/> <h2><a class="text-white" href="/gossips/<%= (index+1) %>"><%= g.title %> <%= (index+1)%></a><br/> <h2> </p>
+        <% g = gossip%>
+       <p>Titre : <br/> <h2><a class="text-white" href="/gossips/<%= (g.id) %>"><%= g.title %> </a><br/> <h2> </p>
         </div>
         </div>
 
