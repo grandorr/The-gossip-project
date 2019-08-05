@@ -1,0 +1,10 @@
+<html>
+  <head>
+<h1> Voici le profil de <%= params[:first_name] %> </h1>
+<!-- <%=u = User.find_by(first_name: params[:first_name])%> -->
+<p> Prénom : <%= u.first_name %>
+<p> Nom de famille : <%= u.last_name %>
+<p> Email : <%= u.email %>
+<p> Age : <%= u.age %>
+<p> Description : <%= u.description %>
+<p> Date de création du profil : <%= u.created_at %>

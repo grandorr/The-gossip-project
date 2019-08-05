@@ -1,0 +1,19 @@
+<html>
+<body>
+	<h1> Voici le potin numéro <%=params[:id]%> </h1>
+	<% g = Gossip.find(params[:id]) %>
+  <p> Le nom de l'auteur : <%= g.user.first_name%>
+	<p> Le contenu du potin :	<%= g.content%> </p>
+  <p> Date de création : <%= g.created_at%> </p>
+  <a href="/user/<%= g.user.first_name%>">Afficher le profil de l'autheur</a>
+  <br/>
+  <br/>
+	<a href="/edit/gossip/<%= params[:id]%>">Modifier</a>
+	<br/>
+	<br/>
+	<a href="/">Retour</a>
+	<br/>
+	<br/>
+
+</body>
+</html>

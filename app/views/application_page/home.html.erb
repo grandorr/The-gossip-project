@@ -1,0 +1,31 @@
+<html>
+  <body>
+    <h1><center>The Gossip Project<center></h1>
+  <div>
+  <center>  <%= image_tag("home/gossip1.jpg", width: '70%')%></center>
+  </div>
+  <!--  <p><center> Vous voulez crée un gossip? </center></p>
+    <p><center> Il suffit de cliquer ici : <a href="<%=gossips_new_path%>">Crée un gossip</a></center> -->
+<h1 class="text-center">Voici les gossips qui on été crée :</h1>
+
+<div class="container">
+
+ <div class="row">
+      <% Gossip.all.each_with_index do |gossip,index| %>
+<div class="col-md-3 ">
+<br/>
+  <div class="card-header "><a href="/gossips/<%= (index+1) %>">Voir le gossip <%= (index+1)%></a><br/>
+         Ecrit par :
+        <% g = Gossip.find(index+1) %>
+       <a href="/user/<%= g.user.first_name%>">  <strong><%= gossip.user.first_name %></strong></a>
+        </div>
+        </div>
+
+
+
+    <% end %>
+</div>
+        </div>
+
+  </body>
+</html>
