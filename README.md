@@ -1,24 +1,21 @@
-# README
+<h1>The Gossip Project</h1
+  
+$ bundle install 
+$ rails db:migrate
+$ rails db:seed
+$ rails s
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+ http://localhost:3000  
 
-Things you may want to cover:
 
-* Ruby version
 
-* System dependencies
+Dans les grandes lignes, voici les fonctionnalités principales de notre application web : 
 
-* Configuration
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+    Jour 1
+    
+    La page d'accueil du site affichera tous les gossips que nous avons en base.
+    Les pages des gossips afficherons le contenus du gossip ainsi qu'un lien vers la 
+    page des autheur, sur cette page vous aurez accès au informations de chaque autheur ainsi que 
+    les gossips qu'ils ont crée .
+    
