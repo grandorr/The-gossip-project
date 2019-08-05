@@ -1,10 +1,33 @@
 <html>
-  <head>
-<h1> Voici le profil de <%= params[:first_name] %> </h1>
+<body class="user text-white">
+<% 5.times do %>
+<br/>
+<% end %>
+<center><h1><%= params[:first_name] %> </h1>
+
 <!-- <%=u = User.find_by(first_name: params[:first_name])%> -->
-<p> Prénom : <%= u.first_name %>
-<p> Nom de famille : <%= u.last_name %>
-<p> Email : <%= u.email %>
-<p> Age : <%= u.age %>
-<p> Description : <%= u.description %>
+<p> <%= u.last_name %>
+<p>  <%= u.email %>
+<p>  <%= u.age %> ans
+<h5><p>  <%= u.description %></h5>
 <p> Date de création du profil : <%= u.created_at %>
+<p> Gossip : </p>
+<div class="container">
+
+ <div class="row">
+      <% u.gossips.all.each_with_index do |gossip,index| %>
+<div class=" col-md-4 ">
+<br/>
+  <div class="card-header  card text-white    ">
+
+        <% g = Gossip.find(index+1) %>
+       <p>Titre : <br/> <h2><a class="text-white" href="/gossips/<%= (index+1) %>"><%= g.title %> <%= (index+1)%></a><br/> <h2> </p>
+        </div>
+        </div>
+
+
+
+    <% end %>
+</div>
+        </div>
+</body>

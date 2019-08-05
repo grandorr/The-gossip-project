@@ -11,6 +11,6 @@ Rails.application.routes.draw do
 
  get '/gossips/:id', to: 'gossips#gossip'
 
- get '/user/:first_name', to: 'users#user'
+ get '/user/:first_name', to: 'users#user' ,as: 'user_info'
 
 end
